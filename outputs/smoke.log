@@ -1,0 +1,9 @@
+DONE NR-AR scaffold 17 logistic none 0.5s
+DONE NR-AR scaffold 17 logistic weights 0.5s
+DONE NR-AR scaffold 17 logistic undersample 0.2s
+DONE NR-AR scaffold 17 logistic smoteenn 5.5s
+DONE NR-AR scaffold 17 forest none 20.6s
+DONE NR-AR scaffold 17 forest weights 14.5s
+DONE NR-AR scaffold 17 forest undersample 2.7s
+DONE NR-AR scaffold 17 forest smoteenn 30.9s
+Execution wall time: 79.4s

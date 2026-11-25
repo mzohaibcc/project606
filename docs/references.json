@@ -1,0 +1,124 @@
+{
+  "verification_date": "2026-11-25",
+  "scope": "Source identity and specified claims; no independent reproduction of cited experiments.",
+  "references": [
+    {
+      "id": 1,
+      "authors": "Gabriel Idakwo; Sundar Thangapandian; Joseph Luttrell; Yan Li; Nan Wang; Zhaoxian Zhou; Huixiao Hong; Bei Yang; Chaoyang Zhang; Ping Gong",
+      "year": 2020,
+      "title": "Structure-activity relationship-based chemical classification of highly imbalanced Tox21 datasets",
+      "journal": "Journal of Cheminformatics",
+      "volume": "12",
+      "article": "66",
+      "doi": "10.1186/s13321-020-00468-x",
+      "urls": [
+        "https://link.springer.com/article/10.1186/s13321-020-00468-x"
+      ],
+      "status": "metadata_and_full_article_verified",
+      "notes": "Published 2020-10-27. RF and resampling comparison with Brier score confirmed. Different curation and bagging design from this project.",
+      "accessed_date": "2026-11-25"
+    },
+    {
+      "id": 2,
+      "authors": "Felipe Santiago-Gonzalez; Jose L. Martinez-Rodriguez; Carlos García-Perez; Alfredo Juarez-Saldivar; Hugo E. Camacho-Cruz",
+      "year": 2025,
+      "title": "Hybrid Class Balancing Approach for Chemical Compound Toxicity Prediction",
+      "journal": "Current Computer-Aided Drug Design",
+      "volume": "21",
+      "issue": "8",
+      "pages": "1093-1107",
+      "doi": "10.2174/0115734099315538240909101737",
+      "urls": [
+        "https://www.benthamscience.com/article/143310"
+      ],
+      "status": "metadata_and_abstract_verified_full_methods_unverified",
+      "notes": "Publisher online date 2024-09-24, issue year 2025. Abstract confirms ten assays and five classifiers. Full text paywalled; not purchased.",
+      "accessed_date": "2026-11-25"
+    },
+    {
+      "id": 3,
+      "authors": "Ruben van den Goorbergh; Maarten van Smeden; Dirk Timmerman; Ben Van Calster",
+      "year": 2022,
+      "title": "The harm of class imbalance corrections for risk prediction models: illustration and simulation using logistic regression",
+      "journal": "Journal of the American Medical Informatics Association",
+      "volume": "29",
+      "issue": "9",
+      "pages": "1525-1534",
+      "doi": "10.1093/jamia/ocac093",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9382395/",
+        "https://academic.oup.com/jamia/article-pdf/29/9/1525/45444435/ocac093.pdf"
+      ],
+      "status": "metadata_and_full_article_verified",
+      "notes": "Online publication 2022-06-10. Clinical and simulation evidence, not chemical fingerprint evidence.",
+      "accessed_date": "2026-11-25"
+    },
+    {
+      "id": 4,
+      "authors": "Kartic; Yeeun Seo; Sanggyun Yi; Tae-Sik Park",
+      "year": 2026,
+      "title": "ToxBench: a leakage-audited multi-task benchmark for predictive toxicology with calibration, uncertainty, and applicability domain analysis",
+      "journal": "BMC Bioinformatics",
+      "doi": "10.1186/s12859-026-06621-x",
+      "urls": [
+        "https://link.springer.com/article/10.1186/s12859-026-06621-x",
+        "https://github.com/kartic03/Toxbench"
+      ],
+      "status": "metadata_and_abstract_verified_class_weight_claim_unverified",
+      "notes": "Published 2026-09-05, early-access accepted version subject to edits. Abstract confirms scaffold/random splits, calibration, nearest-neighbor analysis and five seeds. PDF fetch timed out; specific tree-class-weighting claim not verified.",
+      "accessed_date": "2026-11-25"
+    },
+    {
+      "id": 5,
+      "authors": "DeepChem developers",
+      "year": 2026,
+      "title": "Tox21 dataset loader and linked public dataset",
+      "urls": [
+        "https://raw.githubusercontent.com/deepchem/deepchem/master/deepchem/molnet/load_function/tox21_datasets.py",
+        "https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/tox21.csv.gz"
+      ],
+      "status": "official_source_and_download_link_verified",
+      "notes": "Source declares twelve tasks and S3 URL. Master URL mutable. Actual downloaded counts and checksum must be recorded separately.",
+      "accessed_date": "2026-11-25"
+    },
+    {
+      "id": 6,
+      "authors": "RDKit contributors",
+      "year": 2026,
+      "title": "Getting Started with the RDKit in Python",
+      "urls": [
+        "https://www.rdkit.org/docs/GettingStartedInPython.html"
+      ],
+      "status": "official_documentation_verified",
+      "observed_documentation_version": "2026.09.1",
+      "notes": "Live documentation version is not necessarily installed version.",
+      "accessed_date": "2026-11-25"
+    },
+    {
+      "id": 7,
+      "authors": "Imbalanced-learn developers",
+      "year": 2026,
+      "title": "SMOTEENN API documentation",
+      "urls": [
+        "https://imbalanced-learn.org/stable/references/generated/imblearn.combine.SMOTEENN.html"
+      ],
+      "status": "official_documentation_verified",
+      "observed_documentation_version": "0.14.2",
+      "notes": "Default ENN cleans all classes. Post-cleaning counts need not be 1:1.",
+      "accessed_date": "2026-11-25"
+    },
+    {
+      "id": 8,
+      "authors": "Scikit-learn developers",
+      "year": 2026,
+      "title": "Probability calibration",
+      "urls": [
+        "https://scikit-learn.org/stable/modules/calibration.html"
+      ],
+      "status": "official_documentation_verified",
+      "observed_documentation_version": "1.9.1",
+      "notes": "Use separate calibration data. Live documentation version is not necessarily installed version.",
+      "accessed_date": "2026-11-25"
+    }
+  ]
+}

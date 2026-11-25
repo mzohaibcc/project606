@@ -1,0 +1,11 @@
+[13:51:42] WARNING: not removing hydrogen atom without neighbors
+[13:51:42] WARNING: not removing hydrogen atom without neighbors
+[13:51:43] Explicit valence for atom # 8 Al, 6, is greater than permitted
+[13:51:44] Explicit valence for atom # 3 Al, 6, is greater than permitted
+[13:51:44] Explicit valence for atom # 4 Al, 6, is greater than permitted
+[13:51:45] Explicit valence for atom # 4 Al, 6, is greater than permitted
+[13:51:46] Explicit valence for atom # 9 Al, 6, is greater than permitted
+[13:51:46] Explicit valence for atom # 5 Al, 6, is greater than permitted
+[13:51:47] Explicit valence for atom # 16 Al, 6, is greater than permitted
+[13:51:47] Can't kekulize mol.  Unkekulized atoms: 7 15
+[13:51:48] Explicit valence for atom # 20 Al, 6, is greater than permitted

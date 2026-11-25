@@ -1,0 +1,16 @@
+{
+  "assay": "NR-AR",
+  "split_kind": "scaffold",
+  "seed": 17,
+  "namespace": "ae8fae76b1344a3207fcd341ee3e57f620406aca9d11a6aaddbf7ddefa1bb059",
+  "train_n": 4174,
+  "calibration_n": 1392,
+  "test_n": 1391,
+  "train_prevalence": 0.03306181121226641,
+  "classifier": "logistic",
+  "method": "smoteenn",
+  "seconds": 5.544855082999675,
+  "cv_fits": 12,
+  "final_fits": 1,
+  "completed_utc": "2026-11-25T19:52:23.049085+00:00"
+}

@@ -1,0 +1,162 @@
+{
+  "selected": {
+    "params": {
+      "C": 0.1
+    },
+    "scores": [
+      0.5795515713778532,
+      0.6103533716864478,
+      0.6096514091135417
+    ],
+    "status": "complete",
+    "mean_ap": 0.5998521173926142
+  },
+  "trials": [
+    {
+      "params": {
+        "C": 0.01
+      },
+      "scores": [
+        0.5370832145705036,
+        0.5253033925481336,
+        0.5642448964740897
+      ],
+      "status": "complete",
+      "mean_ap": 0.5422105011975756
+    },
+    {
+      "params": {
+        "C": 0.1
+      },
+      "scores": [
+        0.5795515713778532,
+        0.6103533716864478,
+        0.6096514091135417
+      ],
+      "status": "complete",
+      "mean_ap": 0.5998521173926142
+    },
+    {
+      "params": {
+        "C": 1.0
+      },
+      "scores": [
+        0.5452420191935725,
+        0.6163781877747871,
+        0.5859416112686823
+      ],
+      "status": "complete",
+      "mean_ap": 0.5825206060790139
+    },
+    {
+      "params": {
+        "C": 10.0
+      },
+      "scores": [
+        0.5023858902209868,
+        0.5963489889037576,
+        0.5545525621924098
+      ],
+      "status": "complete",
+      "mean_ap": 0.5510958137723847
+    }
+  ],
+  "sampler_logs": [
+    {
+      "cache_key": "76f341ea8ba4b951b2549ed0e0456bb73a24a200e3a147c05487d1c73a976b79",
+      "input_id_hash": "ffd478b26e650d7f6c0306128097863678fa70d0d0954516070d59605d729e87",
+      "before": {
+        "0": 1875,
+        "1": 355
+      },
+      "method": "weights",
+      "seed": 2026,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 1875,
+        "1": 355
+      },
+      "seconds": 2.262499947391916e-05,
+      "cache_hit": false,
+      "stage": "cv_0"
+    },
+    {
+      "cache_key": "3ad7e12df337d2856502b199ff3dd87c00518af6b92b34e8504ef38fc47b2857",
+      "input_id_hash": "3de657bf95a3b2683413f86b5573a6105503e946d9b8156a0c0af0c308d25af1",
+      "before": {
+        "0": 1875,
+        "1": 356
+      },
+      "method": "weights",
+      "seed": 2027,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 1875,
+        "1": 356
+      },
+      "seconds": 3.041600029973779e-05,
+      "cache_hit": false,
+      "stage": "cv_1"
+    },
+    {
+      "cache_key": "39a63e81777c61f3395142431357a9879cb8cbbf485f4333578d36c626133efd",
+      "input_id_hash": "d448c7323b7f46bce6d81bf50b272ee30f3c991831d571d63c7d58f3f649a175",
+      "before": {
+        "0": 1876,
+        "1": 355
+      },
+      "method": "weights",
+      "seed": 2028,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 1876,
+        "1": 355
+      },
+      "seconds": 2.1500000002561137e-05,
+      "cache_hit": false,
+      "stage": "cv_2"
+    },
+    {
+      "cache_key": "48263ef9e5af3159b764e1f107567ece36b43a47d08e9f8de8fb1f9ae82b4483",
+      "input_id_hash": "305e316319bd94df9f732a6590d72f2233248b21a6cb1a6727dac35064da5cfd",
+      "before": {
+        "0": 2813,
+        "1": 533
+      },
+      "method": "weights",
+      "seed": 2126,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2813,
+        "1": 533
+      },
+      "seconds": 2.062499970634235e-05,
+      "cache_hit": false,
+      "stage": "refit"
+    }
+  ],
+  "cv_fit_count": 12,
+  "final_fit_count": 1,
+  "class_weights": {
+    "0": 0.594738713117668,
+    "1": 3.1388367729831144
+  },
+  "calibration": {
+    "slope": 1.6436975700698166,
+    "intercept": -2.381341629605241,
+    "center": -1.1735391937121484,
+    "scale": 1.6935747261376057,
+    "calibration_n": 1116,
+    "calibration_positive": 177,
+    "constant_mapping": false,
+    "objective": 0.30503160953467356
+  },
+  "calibration_id_hash": "b8787fa56ad83f982fb75d3ed6671b76a3538a9878ca40bb1bdd8dc3dad50399",
+  "training_id_hash": "305e316319bd94df9f732a6590d72f2233248b21a6cb1a6727dac35064da5cfd",
+  "test_id_hash": "02ed518e7d622ab54aab5450e697d5141ab86287f6d325ade5a9e72cffebadac",
+  "rank_order_identical": true
+}

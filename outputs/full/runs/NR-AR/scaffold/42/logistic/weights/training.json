@@ -1,0 +1,162 @@
+{
+  "selected": {
+    "params": {
+      "C": 0.1
+    },
+    "scores": [
+      0.008423719105326232,
+      0.018944926603185835,
+      0.07759381721008092
+    ],
+    "status": "complete",
+    "mean_ap": 0.034987487639530995
+  },
+  "trials": [
+    {
+      "params": {
+        "C": 0.01
+      },
+      "scores": [
+        0.007981917801466832,
+        0.02276500731717438,
+        0.07375981905341619
+      ],
+      "status": "complete",
+      "mean_ap": 0.0348355813906858
+    },
+    {
+      "params": {
+        "C": 0.1
+      },
+      "scores": [
+        0.008423719105326232,
+        0.018944926603185835,
+        0.07759381721008092
+      ],
+      "status": "complete",
+      "mean_ap": 0.034987487639530995
+    },
+    {
+      "params": {
+        "C": 1.0
+      },
+      "scores": [
+        0.007472611345059642,
+        0.019094719161142512,
+        0.07782150214336338
+      ],
+      "status": "complete",
+      "mean_ap": 0.034796277549855176
+    },
+    {
+      "params": {
+        "C": 10.0
+      },
+      "scores": [
+        0.007427091309428056,
+        0.019831777776203804,
+        0.07681549352211466
+      ],
+      "status": "complete",
+      "mean_ap": 0.03469145420258218
+    }
+  ],
+  "sampler_logs": [
+    {
+      "cache_key": "90933d699417bd55a4fabcf5f8209a969286c6ff776d7e304bb53489010f1558",
+      "input_id_hash": "a66f7864e068ca80e51fe38d74bc63c24fa53ceec796eaf51cff5391c605aa9f",
+      "before": {
+        "0": 2462,
+        "1": 153
+      },
+      "method": "weights",
+      "seed": 42,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2462,
+        "1": 153
+      },
+      "seconds": 1.2667000191868283e-05,
+      "cache_hit": false,
+      "stage": "cv_0"
+    },
+    {
+      "cache_key": "a2862c121cdb5af595f530663427b3bcf58d2a68f25414120f6e3172a66d1066",
+      "input_id_hash": "d291a26841f0bc8ad57dde5a8c8e2a0560b8d642d1439e89d3b83da8ff6d0366",
+      "before": {
+        "0": 2672,
+        "1": 143
+      },
+      "method": "weights",
+      "seed": 43,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2672,
+        "1": 143
+      },
+      "seconds": 1.300000076298602e-05,
+      "cache_hit": false,
+      "stage": "cv_1"
+    },
+    {
+      "cache_key": "2a4f5d4b8a39be788b3f496743675cc75dd5bb4eb80e7b089a0b6fe14ff755d6",
+      "input_id_hash": "9025108a9956ac20f55196bb4463dae23a68ba6c4183371c4e7d72baaa262a8f",
+      "before": {
+        "0": 2880,
+        "1": 38
+      },
+      "method": "weights",
+      "seed": 44,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2880,
+        "1": 38
+      },
+      "seconds": 1.383299968438223e-05,
+      "cache_hit": false,
+      "stage": "cv_2"
+    },
+    {
+      "cache_key": "6901005715b0ca74d0471528a56a7d3d523a0b181eb646c85deef7adf439856d",
+      "input_id_hash": "4bc3e93c434d883a72c43b25ffda7b74576ccdc134c1e6e612af55bda3e36014",
+      "before": {
+        "0": 4007,
+        "1": 167
+      },
+      "method": "weights",
+      "seed": 142,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 4007,
+        "1": 167
+      },
+      "seconds": 1.6042000424931757e-05,
+      "cache_hit": false,
+      "stage": "refit"
+    }
+  ],
+  "cv_fit_count": 12,
+  "final_fit_count": 1,
+  "class_weights": {
+    "0": 0.5208385325680059,
+    "1": 12.497005988023952
+  },
+  "calibration": {
+    "slope": 0.9800840433733821,
+    "intercept": -3.4971656524916312,
+    "center": -1.8486186233892705,
+    "scale": 1.5008290710247854,
+    "calibration_n": 1392,
+    "calibration_positive": 65,
+    "constant_mapping": false,
+    "objective": 0.15720638165149162
+  },
+  "calibration_id_hash": "26e439e89f9eb40259b319e65c9e29b4f6f7a709369c07c1e81f7a44a70be0ef",
+  "training_id_hash": "4bc3e93c434d883a72c43b25ffda7b74576ccdc134c1e6e612af55bda3e36014",
+  "test_id_hash": "01709915c1db3077cd35963bca11d6c23e050bef62c56774dc8b5a080824028a",
+  "rank_order_identical": true
+}

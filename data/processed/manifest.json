@@ -1,0 +1,33 @@
+{
+  "cache_key": "36ce73a6ef55997aa9fa150c13318fc347169cb470808ed40c3a4c7b9b8b1995",
+  "inputs": {
+    "code_sha256": "b9fd48e9e176f257318786abea2331d4814ae550f6490d11c238da42f2d2b947",
+    "numpy_version": "2.5.5",
+    "pandas_version": "3.1.1",
+    "raw_sha256": "45d09792492ce049039dd24aa27b07fc79ce20c573187d4d90bcd178c0c0d360",
+    "rdkit_version": "2025.09.3",
+    "settings": {
+      "empty_scaffold": "__EMPTY__",
+      "fingerprint_bits": 2048,
+      "fingerprint_chirality": false,
+      "fingerprint_radius": 2,
+      "identity_stereochemistry": true,
+      "scaffold_stereochemistry": false,
+      "standardization": "RDKit Cleanup; largest carbon-containing fragment by heavy atom count, atom count, lexicographic isomeric SMILES; Uncharger; sanitize",
+      "tautomer_canonicalization": false,
+      "version": 1
+    }
+  },
+  "outputs": {
+    "data/audit/assay_counts.csv": "787310ca7f667d8eed0e27781713389c08e8fb32ebd62e88001b868c7572e11b",
+    "data/audit/duplicate_groups.csv": "88c5dd1440f27499207725a294d6fdf27787a10dea55bad0945c9b53036eba46",
+    "data/audit/exclusions.csv": "70fa9c309fa62b8e321e0ed76ccba839711ec9625a9f33b2f1abe90fba3ffa87",
+    "data/audit/standardized_source_rows.csv": "6ce0d63890b9c8690a5b6c63d42a27800a4c8cd5188543d9691a49f766ecf817",
+    "data/audit/structure_counts.json": "2f7fb62ae4a611f735613914b94c2e0ef16cb1868563d53a30a4c76d5442d76c",
+    "data/processed/NR-AR.csv": "03cb5882cc20c7a1eee8f295946410d45a750b594e70cccbb005ad545c7dfdcd",
+    "data/processed/NR-AhR.csv": "33edfacff2286fa37e65e4a569f3e0dd2b6f8b1d2c0c20c2111cc4646f31caab",
+    "data/processed/SR-MMP.csv": "024f91da3f915eb43fa87907e1f289854b5ae3b549201be80c7bfad1af318327",
+    "data/processed/fingerprints.npy": "791f9e36d58eef7b1d51124b6e71a776b088a113d09bdd01d749d2ae118fe9a2",
+    "data/processed/structures.csv": "2088b6a065a91e21ce2cbd19026d1cde93cb9ca09b7005cbb1531b8fe53cd16d"
+  }
+}

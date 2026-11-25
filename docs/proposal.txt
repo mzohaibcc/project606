@@ -1,0 +1,202 @@
+Class Balancing and Calibration for Toxicity Prediction on New
+Chemical Scaffolds
+Muhammad Zohaib Chaudhary
+CSC606 Machine Learning | Individual Project Proposal
+
+1 Problem and objectives
+I plan to test whether balancing the training data helps machine learning models find active
+compounds with unfamiliar chemical structures. I will also check how reliable their predicted
+probabilities are. The project will use three Tox21 laboratory assays and compare random forests
+with logistic regression in Google Colab.
+Active compounds are much less common than inactive compounds in these assays. A model can
+get many predictions right simply by predicting that most compounds are inactive. Balancing may
+help it find more active cases, but it can also affect its probability estimates. For example, if a
+model assigns 100 compounds a probability close to 0.20, about 20 should be active for that
+estimate to be reliable.
+My research question is: Which balancing methods help models find more active compounds on
+new chemical scaffolds while keeping their probability estimates reliable? A scaffold is the central
+framework of rings and connecting groups in a molecule. I will compare methods using the same
+number of compounds selected for screening, then check their probabilities before and after
+calibration. The aim is to help choose compounds for laboratory testing. An active assay result
+alone does not establish whether a chemical is harmful to people.
+2 Preliminary literature review
+Idakwo et al. [1], including coauthor Chaoyang Zhang, studied imbalanced Tox21 assays using
+random forests, random undersampling, SMOTE, and SMOTEENN. They reported Brier scores as
+well as classification measures. SMOTEENN performed well overall, which makes it a useful
+method to include in my comparison.
+Santiago-Gonzalez et al. [2] compared balancing methods across ten Tox21 assays, several ways
+of representing molecules, and five classifiers. Their study already covers a broad range of
+methods. I will focus on whether balancing still helps when the test compounds have scaffolds that
+are absent from the training data.
+Van den Goorbergh et al. [3] found that resampling could distort logistic-regression probabilities
+without improving the separation of positive and negative cases. Their evidence came from
+simulations and a clinical case study. This gives a reason to check calibration, but the same result
+cannot be assumed for chemical fingerprints or random forests.
+The September 2026 ToxBench study [4] examines random and scaffold splits, probability
+calibration, and structural similarity. It also uses class weighting for its tree models. I will build on
+that evaluation setup by comparing balancing choices, including a model trained without
+balancing, and applying the same calibration procedure to each. The question is whether balancing
+improves detection on unfamiliar structures and what happens to the probabilities it produces.
+
+
+
+
+                                                    1
+3 Data and preparation
+I will use the public Tox21 CSV file from DeepChem [5]. A preliminary check of the download
+found 7,831 records, SMILES strings that describe molecular structures, and twelve assay-label
+columns. I selected NR-AR, NR-AhR, and SR-MMP because they have different proportions of
+active compounds and cover nuclear-receptor and stress-response assays. Table 1 shows the raw
+counts. These will change after cleaning the structures and removing duplicates.
+Table 1 Raw label counts in the downloaded Tox21 file
+     Assay        Observed labels        Active       Active share        Missing labels
+    NR-AR         7,265                  309          4.25%               566
+    NR-AhR        6,549                  768          11.73%              1,282
+   SR-MMP         5,810                  918          15.80%              2,021
+
+NR-AR measures androgen-receptor activity, NR-AhR measures aryl-hydrocarbon-receptor
+activity, and SR-MMP concerns mitochondrial membrane potential. Each assay will be a separate
+binary prediction task. If a label is missing, that compound will be excluded only from the affected
+assay. Missing labels will not be treated as inactive results.
+RDKit [6] will parse the SMILES strings, standardize structures, retain the main organic fragment,
+and generate canonical identifiers. Invalid structures will be logged and excluded. For each assay,
+duplicate structures with consistent labels will be merged, while structures with conflicting labels
+will be removed from that assay. These rules will be fixed before splitting. I will save the
+download checksum and a record of all exclusions.
+4 Proposed machine learning approach
+Each molecule will be represented by a 2,048-bit Morgan fingerprint with radius 2, commonly
+called ECFP4. This encodes patterns in its local chemical structure. I will use the same
+representation throughout so that changes in the results can be traced to the balancing method.
+Random forests can learn nonlinear combinations of these patterns. Regularized logistic regression
+will provide a simpler comparison.
+For each classifier, I will compare no balancing, inverse-frequency class weights, random
+undersampling, and SMOTEENN [7]. Undersampling will reduce the majority class to reach a 1:1
+ratio. SMOTEENN will first oversample toward 1:1, then remove points using its nearest-
+neighbor cleaning rule. I will report the final counts after cleaning. The synthetic fingerprint
+vectors are numerical training examples, not newly generated molecules.
+I will test four settings for each classifier. For logistic regression, C will be 0.01, 0.1, 1, or 10.
+Random forests will use 200 trees, with maximum depth 10 or unrestricted and minimum leaf size
+1 or 5. Resampling and class weights will be calculated using training folds only. Evaluation folds
+will retain their observed class proportions.
+
+
+
+
+                                                  2
+5 Evaluation plan
+The main evaluation will hold out chemical scaffolds. Compounds sharing a Bemis-Murcko
+scaffold will remain together, including one group for acyclic compounds with an empty scaffold.
+Groups will be assigned to approximately 60% training, 20% calibration, and 20% testing. Exact
+sizes and positive counts will be reported. A stratified random split with the same proportions will
+provide a reference. Both settings will use three fixed seeds and identical partitions for all
+competing methods.
+Hyperparameters will be selected by average precision in three-fold cross-validation within the
+training partition. The scaffold experiment will preserve scaffold groups in these folds; the random
+experiment will use stratified folds. Any learned preprocessing and resampling will be fitted inside
+each fold. The selected model will then be refitted on the training partition. Neither the calibration
+partition nor the test partition will be used for model selection.
+I will fit a sigmoid calibration function [8] using the separate calibration partition, which will
+retain its original class frequencies. This function adjusts model scores to improve their agreement
+with observed activity rates. Every method, including the model without balancing, will be tested
+before and after calibration. Test labels will be used only for evaluation. If calibration preserves
+the ranking of compounds, I will not count it as an improvement in ranking.
+The main detection measure will be average precision, which summarizes the precision-recall
+curve. I will also measure precision and recall among the highest-ranked 10% of test compounds,
+with a fixed rule for ties. Selecting the same proportion gives each method the same screening
+budget. ROC-AUC will be a secondary measure. Each results table will include the proportion of
+active compounds because it affects precision-based measures.
+I will assess the probabilities using Brier score and log loss. A model that always predicts the
+training prevalence will provide a simple reference. Reliability plots, with the number of
+compounds in each bin, will show how predicted probabilities compare with observed activity
+rates. Since Brier score measures more than calibration, I will read it alongside these plots. I will
+report results before and after calibration, including any cases where it makes them worse.
+Each balancing method will be compared with the model without balancing on the same assay,
+data split, and calibration condition. I will report means and standard deviations across seeds, plus
+paired 95% bootstrap intervals within each test partition. Test scaffold groups will be resampled
+together. Results for subsets with fewer than 20 active compounds will be treated as exploratory. I
+will also measure Tanimoto similarity to the nearest training compound, since molecules with
+different scaffolds can still be similar.
+I will look for methods that find more active compounds within the screening budget while
+retaining reliable probabilities after calibration. If a method improves detection but makes its
+probabilities worse, I will report both results. Comparing the random and scaffold splits will show
+whether a benefit remains when the model is tested on unfamiliar scaffolds.
+
+
+
+
+                                                   3
+6 Google Colab implementation and schedule
+The Colab notebook will use Python, Pandas, NumPy, RDKit, scikit-learn, imbalanced-learn, and
+Matplotlib. Pandas can load the compressed CSV directly from DeepChem. I will use the official
+data loader and library examples [5-8] as references, then write the cleaning, data-splitting,
+training, and evaluation code for this project.
+The plan includes 144 fitted model configurations: three assays, two classifiers, four balancing
+choices, two split methods, and three seeds. The cross-validation searches require additional fits,
+while calibration reuses the fitted models. I will first measure the time needed for one assay on a
+Colab CPU. Fingerprints and resampled training folds will be cached, and completed predictions
+will be saved between sessions. The dataset size and small tuning grids should keep the work
+manageable without a GPU.
+  Week     Planned work
+    1      Read the closest papers and complete the data audit.
+    2      Prepare fingerprints, cleaning records, and fixed partitions.
+   3-4     Implement baselines and balancing methods; tune models.
+    5      Fit calibration functions and verify data separation.
+   6-7     Run the comparisons, uncertainty estimates, and error analysis.
+    8      Finish the report and reproducible Colab notebook.
+
+
+7 Expected outcomes and research value
+The study should help explain when balancing finds more active compounds and when it mainly
+changes the predicted probabilities. I expect performance on unfamiliar scaffolds to be weaker or
+less stable than on a random split. The experiments will show whether calibration helps, and
+whether any improvement depends on the assay or classifier.
+I will produce a Colab notebook that others can rerun, with fixed data splits and the same
+evaluation rules for every method. The final report will compare results for each assay and include
+precision-recall and reliability plots. The notebook will contain the full tables, graphs, and code. I
+will discuss small active-class counts, noisy assay labels, and the limits of measuring chemical
+similarity with fingerprints.
+For a PhD research extension, I would test all twelve assays, add other fingerprints, and check the
+findings on an independent collection with compatible assays and no overlapping compounds. A
+publishable study would need a clear, consistent finding about when balancing helps or harms,
+supported beyond the three assays in this course project. That is the longer-term goal; the course
+project will establish whether the results justify expanding the study.
+
+
+
+
+                                                      4
+References
+[1] G. Idakwo et al. (2020). Structure-activity relationship-based chemical classification of highly
+     imbalanced Tox21 datasets. Journal of Cheminformatics, 12, 66. DOI: 10.1186/s13321-020-
+     00468-x.
+
+[2] F. Santiago-Gonzalez et al. (2025). Hybrid Class Balancing Approach for Chemical
+     Compound Toxicity Prediction. Current Computer-Aided Drug Design, 21(8), 1093-1107.
+     DOI: 10.2174/0115734099315538240909101737.
+
+[3] R. van den Goorbergh, M. van Smeden, D. Timmerman, and B. Van Calster. (2022). The harm
+     of class imbalance corrections for risk prediction models: illustration and simulation using
+     logistic regression. Journal of the American Medical Informatics Association, 29(9), 1525-
+     1534. DOI: 10.1093/jamia/ocac093.
+
+[4] Kartic, Y. Seo, S. Yi, and T.-S. Park. (2026). ToxBench: a leakage-audited multi-task
+     benchmark for predictive toxicology with calibration, uncertainty, and applicability domain
+     analysis. BMC Bioinformatics. Published September 5. DOI: 10.1186/s12859-026-06621-x.
+
+[5] DeepChem developers. (2026). Tox21 dataset loader and public data source. Source code and
+     linked tox21.csv.gz dataset. Accessed October 8, 2026.
+
+[6] RDKit contributors. (2026). Getting Started with the RDKit in Python. Official documentation.
+     Accessed October 8, 2026.
+
+[7] Imbalanced-learn developers. (2026). SMOTEENN. Official API documentation. Accessed
+     October 8, 2026.
+
+[8] Scikit-learn developers. (2026). Probability calibration. Official user guide. Accessed October
+     8, 2026.
+
+
+
+
+                                                  5
+

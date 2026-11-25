@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+outputs/*/cache/
+tmp/
+*.zip
+
+# Fitted model binaries: 122 MB, regenerable by re-running the pipeline.
+# predictions.csv and training.json fully determine every reported result.
+outputs/**/model.joblib
+
+# Notebook demo scratch: recreated from scratch on every notebook run.
+outputs/notebook_demo/

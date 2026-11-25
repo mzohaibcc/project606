@@ -1,0 +1,184 @@
+{
+  "selected": {
+    "params": {
+      "max_depth": null,
+      "min_samples_leaf": 1
+    },
+    "scores": [
+      0.49143399594565185,
+      0.4100692896546573,
+      0.5415834948152922
+    ],
+    "status": "complete",
+    "mean_ap": 0.48102892680520043
+  },
+  "trials": [
+    {
+      "params": {
+        "max_depth": 10,
+        "min_samples_leaf": 1
+      },
+      "scores": [
+        0.4671783456837336,
+        0.3395116228553423,
+        0.5190242365053999
+      ],
+      "status": "complete",
+      "mean_ap": 0.44190473501482525
+    },
+    {
+      "params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5
+      },
+      "scores": [
+        0.45771347870302476,
+        0.3291640029146355,
+        0.50988567888868
+      ],
+      "status": "complete",
+      "mean_ap": 0.4322543868354467
+    },
+    {
+      "params": {
+        "max_depth": null,
+        "min_samples_leaf": 1
+      },
+      "scores": [
+        0.49143399594565185,
+        0.4100692896546573,
+        0.5415834948152922
+      ],
+      "status": "complete",
+      "mean_ap": 0.48102892680520043
+    },
+    {
+      "params": {
+        "max_depth": null,
+        "min_samples_leaf": 5
+      },
+      "scores": [
+        0.4604181058904648,
+        0.3707773729374803,
+        0.5517415797122042
+      ],
+      "status": "complete",
+      "mean_ap": 0.4609790195133831
+    }
+  ],
+  "sampler_logs": [
+    {
+      "cache_key": "ba497b8c78268c4dc818e01fd52c0e834bf909c408cb7a9385eccee2ee5b33c0",
+      "input_id_hash": "2e421dff2a043f20e32bc2c623c125356abff1462a09770749802821b00b6d59",
+      "before": {
+        "0": 2211,
+        "1": 299
+      },
+      "method": "smoteenn",
+      "seed": 42,
+      "adjustment": null,
+      "dtype": "float32",
+      "after_smote_expected": {
+        "0": 2211,
+        "1": 2211
+      },
+      "fractional_values": 54883,
+      "after": {
+        "0": 1385,
+        "1": 2201
+      },
+      "seconds": 0.7133144580002408,
+      "cache_hit": true,
+      "stage": "cv_0"
+    },
+    {
+      "cache_key": "b631282f622a1ce4130db77fb230bc913d8d423af6054a4814244de395523b1f",
+      "input_id_hash": "7faa2d4759a098b8eaa454f133e585fd35c21331bc133e403f81bedf8070145c",
+      "before": {
+        "0": 2211,
+        "1": 300
+      },
+      "method": "smoteenn",
+      "seed": 43,
+      "adjustment": null,
+      "dtype": "float32",
+      "after_smote_expected": {
+        "0": 2211,
+        "1": 2211
+      },
+      "fractional_values": 51270,
+      "after": {
+        "0": 1427,
+        "1": 2200
+      },
+      "seconds": 0.7173120829993422,
+      "cache_hit": true,
+      "stage": "cv_1"
+    },
+    {
+      "cache_key": "7b3ab390109b94b3524cba80e47af382b5696ec95b9205cb69834a6919277389",
+      "input_id_hash": "557010eb99b5bb5645cf0495a3e80cda97d2442186ffcad3f7d9058d635d2c9d",
+      "before": {
+        "0": 2212,
+        "1": 299
+      },
+      "method": "smoteenn",
+      "seed": 44,
+      "adjustment": null,
+      "dtype": "float32",
+      "after_smote_expected": {
+        "0": 2212,
+        "1": 2212
+      },
+      "fractional_values": 54728,
+      "after": {
+        "0": 1368,
+        "1": 2201
+      },
+      "seconds": 0.707172417000038,
+      "cache_hit": true,
+      "stage": "cv_2"
+    },
+    {
+      "cache_key": "3a6fb0dc72aba5fc94f82add17bd010ddf4c5abc636030eda9b9f5701e61e65b",
+      "input_id_hash": "135b388eb46b6ca82b59963e75fe0408b7f24c0220357ae75e280b26453bbd40",
+      "before": {
+        "0": 3317,
+        "1": 449
+      },
+      "method": "smoteenn",
+      "seed": 142,
+      "adjustment": null,
+      "dtype": "float32",
+      "after_smote_expected": {
+        "0": 3317,
+        "1": 3317
+      },
+      "fractional_values": 75445,
+      "after": {
+        "0": 2198,
+        "1": 3288
+      },
+      "seconds": 1.7241802919998008,
+      "cache_hit": true,
+      "stage": "refit"
+    }
+  ],
+  "cv_fit_count": 12,
+  "final_fit_count": 1,
+  "class_weights": null,
+  "calibration": {
+    "slope": 1.3995341039983793,
+    "intercept": -2.7352813668849985,
+    "center": 0.2510071656050955,
+    "scale": 0.26519319201061986,
+    "calibration_n": 1256,
+    "calibration_positive": 150,
+    "constant_mapping": false,
+    "objective": 0.2583130617200697
+  },
+  "calibration_id_hash": "a45887be7dd667c76f78018bc36aecce6c3af387a4ce23ca2d71182b26e86a69",
+  "training_id_hash": "135b388eb46b6ca82b59963e75fe0408b7f24c0220357ae75e280b26453bbd40",
+  "test_id_hash": "29211faf14b45469962ca6b9e6c9dfd183b8efbf0ce4457a73168f407a5579e7",
+  "rank_order_identical": true
+}

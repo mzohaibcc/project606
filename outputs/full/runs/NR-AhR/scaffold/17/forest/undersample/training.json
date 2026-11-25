@@ -1,0 +1,164 @@
+{
+  "selected": {
+    "params": {
+      "max_depth": null,
+      "min_samples_leaf": 1
+    },
+    "scores": [
+      0.19439837126027856,
+      0.19485613383173056,
+      0.44601967815944055
+    ],
+    "status": "complete",
+    "mean_ap": 0.2784247277504832
+  },
+  "trials": [
+    {
+      "params": {
+        "max_depth": 10,
+        "min_samples_leaf": 1
+      },
+      "scores": [
+        0.2202029296800385,
+        0.15673613718494506,
+        0.40751865923068337
+      ],
+      "status": "complete",
+      "mean_ap": 0.26148590869855565
+    },
+    {
+      "params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5
+      },
+      "scores": [
+        0.20315231035808579,
+        0.14143564085938298,
+        0.39854810084578923
+      ],
+      "status": "complete",
+      "mean_ap": 0.2477120173544193
+    },
+    {
+      "params": {
+        "max_depth": null,
+        "min_samples_leaf": 1
+      },
+      "scores": [
+        0.19439837126027856,
+        0.19485613383173056,
+        0.44601967815944055
+      ],
+      "status": "complete",
+      "mean_ap": 0.2784247277504832
+    },
+    {
+      "params": {
+        "max_depth": null,
+        "min_samples_leaf": 5
+      },
+      "scores": [
+        0.21496879126675505,
+        0.11927408253695246,
+        0.4056212791920149
+      ],
+      "status": "complete",
+      "mean_ap": 0.24662138433190747
+    }
+  ],
+  "sampler_logs": [
+    {
+      "cache_key": "8438d711a94ca848cfa26ebe9d2538dad74a7aaefb3c1932f48e10536da8fe80",
+      "input_id_hash": "1f0b604c786b4f769f1b8f45d3cbc001171ce4d1ad6f436a8306b99e30cb7418",
+      "before": {
+        "0": 2325,
+        "1": 212
+      },
+      "method": "undersample",
+      "seed": 17,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 212,
+        "1": 212
+      },
+      "seconds": 0.0017831249997470877,
+      "cache_hit": true,
+      "stage": "cv_0"
+    },
+    {
+      "cache_key": "d736144d4eb0abc2d1e4d3d0e1e487ebf175a9515046b1cacb37d78abdf111d1",
+      "input_id_hash": "76a5d99ecc5733424ff03fe2f148d819dea91c58806ad1066ffc18304953ead3",
+      "before": {
+        "0": 1921,
+        "1": 350
+      },
+      "method": "undersample",
+      "seed": 18,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 350,
+        "1": 350
+      },
+      "seconds": 0.0017175410002892022,
+      "cache_hit": true,
+      "stage": "cv_1"
+    },
+    {
+      "cache_key": "24d83060d516a83d01bbe76da38df554fcf57ac889e0f4c49d13c9918b955943",
+      "input_id_hash": "b0c0c80751b5c088c06e308e259ed3c22995eed81a6b6b3333732837fa419e2e",
+      "before": {
+        "0": 2552,
+        "1": 174
+      },
+      "method": "undersample",
+      "seed": 19,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 174,
+        "1": 174
+      },
+      "seconds": 0.0014325840002129553,
+      "cache_hit": true,
+      "stage": "cv_2"
+    },
+    {
+      "cache_key": "c5b14ebf0ea8f65ca7eb75e089dbb80e64798a9504323e2e104162b95b3f4d60",
+      "input_id_hash": "41e0c0ebcfc0b221deedeb35c431895766bf36708934a03523454ab4bf0257b2",
+      "before": {
+        "0": 3399,
+        "1": 368
+      },
+      "method": "undersample",
+      "seed": 117,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 368,
+        "1": 368
+      },
+      "seconds": 0.002208500000051572,
+      "cache_hit": true,
+      "stage": "refit"
+    }
+  ],
+  "cv_fit_count": 12,
+  "final_fit_count": 1,
+  "class_weights": null,
+  "calibration": {
+    "slope": 1.4215149215671876,
+    "intercept": -2.4735174935611246,
+    "center": 0.47351751592356695,
+    "scale": 0.21349149737562148,
+    "calibration_n": 1256,
+    "calibration_positive": 172,
+    "constant_mapping": false,
+    "objective": 0.3174498205830944
+  },
+  "calibration_id_hash": "6af8601b9811172ec6e4a9e331787643b57f5d7a7ab89d404c550c1d10415f23",
+  "training_id_hash": "41e0c0ebcfc0b221deedeb35c431895766bf36708934a03523454ab4bf0257b2",
+  "test_id_hash": "e110c586fe9e7277b076c0d6a25e2ee89e8a0a7dd98579f626b9419d352bfc6b",
+  "rank_order_identical": true
+}

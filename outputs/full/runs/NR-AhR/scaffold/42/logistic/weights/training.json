@@ -1,0 +1,162 @@
+{
+  "selected": {
+    "params": {
+      "C": 0.01
+    },
+    "scores": [
+      0.11295208439755697,
+      0.31173967003804304,
+      0.41376019722351004
+    ],
+    "status": "complete",
+    "mean_ap": 0.27948398388637
+  },
+  "trials": [
+    {
+      "params": {
+        "C": 0.01
+      },
+      "scores": [
+        0.11295208439755697,
+        0.31173967003804304,
+        0.41376019722351004
+      ],
+      "status": "complete",
+      "mean_ap": 0.27948398388637
+    },
+    {
+      "params": {
+        "C": 0.1
+      },
+      "scores": [
+        0.11374896762065563,
+        0.37267384107317686,
+        0.3471404042562692
+      ],
+      "status": "complete",
+      "mean_ap": 0.27785440431670055
+    },
+    {
+      "params": {
+        "C": 1.0
+      },
+      "scores": [
+        0.10933794669920256,
+        0.36493130235418436,
+        0.2638109448789151
+      ],
+      "status": "complete",
+      "mean_ap": 0.24602673131076735
+    },
+    {
+      "params": {
+        "C": 10.0
+      },
+      "scores": [
+        0.09569822028209743,
+        0.3559761893310973,
+        0.2227500175967778
+      ],
+      "status": "complete",
+      "mean_ap": 0.22480814240332417
+    }
+  ],
+  "sampler_logs": [
+    {
+      "cache_key": "ab81ec9d04f0212735b99da3b6c5a085b0f0808cf5ab2d4cb6bb15c276f84fea",
+      "input_id_hash": "a044003a15ac093ca70383493a3a9182a6faca78c196c9c180a5dd5cc346f576",
+      "before": {
+        "0": 1946,
+        "1": 325
+      },
+      "method": "weights",
+      "seed": 42,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 1946,
+        "1": 325
+      },
+      "seconds": 2.6542000341578387e-05,
+      "cache_hit": false,
+      "stage": "cv_0"
+    },
+    {
+      "cache_key": "ba3c62874e8034ba98cee097aad33d7173558004d853ab4621c8e7d8c7bf0fd7",
+      "input_id_hash": "adcd982178a507bdb80a38d0d03bfda27cf43e9bc6412bcfa7bb9e4e704ed08f",
+      "before": {
+        "0": 2350,
+        "1": 187
+      },
+      "method": "weights",
+      "seed": 43,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2350,
+        "1": 187
+      },
+      "seconds": 2.2416999854613096e-05,
+      "cache_hit": false,
+      "stage": "cv_1"
+    },
+    {
+      "cache_key": "af3a94d50227bd40323a70de39664247d8b4543037438f21e171e116640a44b9",
+      "input_id_hash": "b0c0c80751b5c088c06e308e259ed3c22995eed81a6b6b3333732837fa419e2e",
+      "before": {
+        "0": 2552,
+        "1": 174
+      },
+      "method": "weights",
+      "seed": 44,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2552,
+        "1": 174
+      },
+      "seconds": 2.3042000066197943e-05,
+      "cache_hit": false,
+      "stage": "cv_2"
+    },
+    {
+      "cache_key": "f43e2c8c1b7922cc3d0150cd846618068762dd5e366f2365f42874046aadebf7",
+      "input_id_hash": "de6a872e2d8642078e2a0155c002b4dbd92165ac476b26dc5201508cf955d4b7",
+      "before": {
+        "0": 3424,
+        "1": 343
+      },
+      "method": "weights",
+      "seed": 142,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 3424,
+        "1": 343
+      },
+      "seconds": 2.829100048984401e-05,
+      "cache_hit": false,
+      "stage": "refit"
+    }
+  ],
+  "cv_fit_count": 12,
+  "final_fit_count": 1,
+  "class_weights": {
+    "0": 0.5500876168224299,
+    "1": 5.4912536443148685
+  },
+  "calibration": {
+    "slope": 1.4536796633251001,
+    "intercept": -1.998534826237172,
+    "center": -0.10642614231560073,
+    "scale": 1.03545246694911,
+    "calibration_n": 1256,
+    "calibration_positive": 235,
+    "constant_mapping": false,
+    "objective": 0.37357259738527804
+  },
+  "calibration_id_hash": "cdb17bb064fbe84f2152321ddaa5e747733594989369b7ea2971d389deec426a",
+  "training_id_hash": "de6a872e2d8642078e2a0155c002b4dbd92165ac476b26dc5201508cf955d4b7",
+  "test_id_hash": "c93008390798b12cc90fce6e67d9fa118f2e500687238fe33b93db5459a38dd6",
+  "rank_order_identical": true
+}

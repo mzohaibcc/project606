@@ -1,0 +1,38 @@
+{
+  "assay_label_columns": [
+    "NR-AR",
+    "NR-AR-LBD",
+    "NR-AhR",
+    "NR-Aromatase",
+    "NR-ER",
+    "NR-ER-LBD",
+    "NR-PPAR-gamma",
+    "SR-ARE",
+    "SR-ATAD5",
+    "SR-HSE",
+    "SR-MMP",
+    "SR-p53"
+  ],
+  "bytes": 122925,
+  "columns": [
+    "NR-AR",
+    "NR-AR-LBD",
+    "NR-AhR",
+    "NR-Aromatase",
+    "NR-ER",
+    "NR-ER-LBD",
+    "NR-PPAR-gamma",
+    "SR-ARE",
+    "SR-ATAD5",
+    "SR-HSE",
+    "SR-MMP",
+    "SR-p53",
+    "mol_id",
+    "smiles"
+  ],
+  "deepchem_loader_url": "https://github.com/deepchem/deepchem/blob/master/deepchem/molnet/load_function/tox21_datasets.py",
+  "downloaded_at_utc": "2026-11-25T19:51:42.627374+00:00",
+  "raw_records": 7831,
+  "sha256": "45d09792492ce049039dd24aa27b07fc79ce20c573187d4d90bcd178c0c0d360",
+  "url": "https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/tox21.csv.gz"
+}

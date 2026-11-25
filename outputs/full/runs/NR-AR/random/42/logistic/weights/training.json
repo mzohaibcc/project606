@@ -1,0 +1,162 @@
+{
+  "selected": {
+    "params": {
+      "C": 0.01
+    },
+    "scores": [
+      0.47814453565663234,
+      0.3852327693555671,
+      0.536057085038789
+    ],
+    "status": "complete",
+    "mean_ap": 0.4664781300169962
+  },
+  "trials": [
+    {
+      "params": {
+        "C": 0.01
+      },
+      "scores": [
+        0.47814453565663234,
+        0.3852327693555671,
+        0.536057085038789
+      ],
+      "status": "complete",
+      "mean_ap": 0.4664781300169962
+    },
+    {
+      "params": {
+        "C": 0.1
+      },
+      "scores": [
+        0.46840544400852074,
+        0.38905874841782306,
+        0.48983074942571136
+      ],
+      "status": "complete",
+      "mean_ap": 0.44909831395068506
+    },
+    {
+      "params": {
+        "C": 1.0
+      },
+      "scores": [
+        0.46247809908814136,
+        0.3931939445290526,
+        0.4416900694828803
+      ],
+      "status": "complete",
+      "mean_ap": 0.4324540377000248
+    },
+    {
+      "params": {
+        "C": 10.0
+      },
+      "scores": [
+        0.44887881745351765,
+        0.39023629660636755,
+        0.4182976839704839
+      ],
+      "status": "complete",
+      "mean_ap": 0.41913759934345635
+    }
+  ],
+  "sampler_logs": [
+    {
+      "cache_key": "39e06c2978eaad43a6da7cd44d395f9c286bc600e9b7b1cdeed8796539b262bd",
+      "input_id_hash": "0205f143546ac0d7938ba557e70d640c00498e15726777dc3adc6e4aed282b0e",
+      "before": {
+        "0": 2663,
+        "1": 119
+      },
+      "method": "weights",
+      "seed": 42,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2663,
+        "1": 119
+      },
+      "seconds": 1.5249999705702066e-05,
+      "cache_hit": false,
+      "stage": "cv_0"
+    },
+    {
+      "cache_key": "0b9bab9259dbf72baa2b62bd83a29a52991c698eb7eadb5eb0236617b7823b0e",
+      "input_id_hash": "3ddac100a23825b33cc09c65d51ea5e040ededac12cd74b4d930d639786d3e89",
+      "before": {
+        "0": 2663,
+        "1": 120
+      },
+      "method": "weights",
+      "seed": 43,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2663,
+        "1": 120
+      },
+      "seconds": 1.5917000382614788e-05,
+      "cache_hit": false,
+      "stage": "cv_1"
+    },
+    {
+      "cache_key": "dc059e457d0d8b236e9d3f5728bae899a1fb8065c9ec9c358a6c381fd8b81078",
+      "input_id_hash": "0278db8276c42b5064fcf3b75b6543a76dfc5a24700e8345aae513d1b2ffb60a",
+      "before": {
+        "0": 2664,
+        "1": 119
+      },
+      "method": "weights",
+      "seed": 44,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2664,
+        "1": 119
+      },
+      "seconds": 1.704199985397281e-05,
+      "cache_hit": false,
+      "stage": "cv_2"
+    },
+    {
+      "cache_key": "2cc70bbe79a487083486c1925a0353e58d7bc66fbf1cafa3d861eb65368823db",
+      "input_id_hash": "8f17f68b231e135d0daf8b0e6fed50f4a76ca57ab48e9cf55b72a3f77619b38f",
+      "before": {
+        "0": 3995,
+        "1": 179
+      },
+      "method": "weights",
+      "seed": 142,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 3995,
+        "1": 179
+      },
+      "seconds": 1.7166000361612532e-05,
+      "cache_hit": false,
+      "stage": "refit"
+    }
+  ],
+  "cv_fit_count": 12,
+  "final_fit_count": 1,
+  "class_weights": {
+    "0": 0.5224030037546934,
+    "1": 11.659217877094973
+  },
+  "calibration": {
+    "slope": 1.4120254181477627,
+    "intercept": -4.169881275209978,
+    "center": -0.7763067703279423,
+    "scale": 0.8114407164800677,
+    "calibration_n": 1391,
+    "calibration_positive": 59,
+    "constant_mapping": false,
+    "objective": 0.10096640555663619
+  },
+  "calibration_id_hash": "075e90f80be0722102161759b720df5ceaf86ba89377271f6adc8a1738732c2b",
+  "training_id_hash": "8f17f68b231e135d0daf8b0e6fed50f4a76ca57ab48e9cf55b72a3f77619b38f",
+  "test_id_hash": "44378eef59bd40a90230c198dfcd267ecddd0c56de7d05a4742b51abb390629c",
+  "rank_order_identical": true
+}

@@ -1,0 +1,162 @@
+{
+  "selected": {
+    "params": {
+      "C": 0.1
+    },
+    "scores": [
+      0.4063841967548758,
+      0.11126653609846897,
+      0.3676552718570768
+    ],
+    "status": "complete",
+    "mean_ap": 0.2951020015701405
+  },
+  "trials": [
+    {
+      "params": {
+        "C": 0.01
+      },
+      "scores": [
+        0.33139642784483087,
+        0.11536041293679784,
+        0.3986889208760404
+      ],
+      "status": "complete",
+      "mean_ap": 0.28181525388588974
+    },
+    {
+      "params": {
+        "C": 0.1
+      },
+      "scores": [
+        0.4063841967548758,
+        0.11126653609846897,
+        0.3676552718570768
+      ],
+      "status": "complete",
+      "mean_ap": 0.2951020015701405
+    },
+    {
+      "params": {
+        "C": 1.0
+      },
+      "scores": [
+        0.3879410479202778,
+        0.0921264332222654,
+        0.3126569108047112
+      ],
+      "status": "complete",
+      "mean_ap": 0.26424146398241816
+    },
+    {
+      "params": {
+        "C": 10.0
+      },
+      "scores": [
+        0.37577970453789816,
+        0.09286592853893276,
+        0.26509493891473196
+      ],
+      "status": "complete",
+      "mean_ap": 0.24458019066385428
+    }
+  ],
+  "sampler_logs": [
+    {
+      "cache_key": "ab509f77fb836ef54a1d3510fa87b042f14b62fac6aebe23976863c2d5884dab",
+      "input_id_hash": "d8eecde945e2377ba2704d342e52317ac0111790bfdb6253c14c163784ef88c9",
+      "before": {
+        "0": 1993,
+        "1": 212
+      },
+      "method": "weights",
+      "seed": 2026,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 1993,
+        "1": 212
+      },
+      "seconds": 1.650000012887176e-05,
+      "cache_hit": false,
+      "stage": "cv_0"
+    },
+    {
+      "cache_key": "8f8e4a8a3f6a6ae8acd723ca594316fd4723bb3a60896667ddc8fae48c32fe30",
+      "input_id_hash": "58b2471b2aede7ebb6449c09e605ccb3947228d4d60a1ae7e097f158f26851e7",
+      "before": {
+        "0": 1640,
+        "1": 353
+      },
+      "method": "weights",
+      "seed": 2027,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 1640,
+        "1": 353
+      },
+      "seconds": 2.4250000024039764e-05,
+      "cache_hit": false,
+      "stage": "cv_1"
+    },
+    {
+      "cache_key": "b7432a8f92804b437d11543da1405747b652413240fb3a2acda27f1e50b9bdf9",
+      "input_id_hash": "c83a4feded689360f5c7282eccf14140d432151488a905c2acd60c84e61f643e",
+      "before": {
+        "0": 2263,
+        "1": 233
+      },
+      "method": "weights",
+      "seed": 2028,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2263,
+        "1": 233
+      },
+      "seconds": 1.820800025598146e-05,
+      "cache_hit": false,
+      "stage": "cv_2"
+    },
+    {
+      "cache_key": "e87e26271667f3f67524202d126e6e2bdef976b3a13767405f4e84d89ee3144b",
+      "input_id_hash": "c064ef3edbcc6f1769979b7ffc972c15a3371c96a11b4ca4629f56fb70201aa3",
+      "before": {
+        "0": 2948,
+        "1": 399
+      },
+      "method": "weights",
+      "seed": 2126,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2948,
+        "1": 399
+      },
+      "seconds": 2.5333999474241864e-05,
+      "cache_hit": false,
+      "stage": "refit"
+    }
+  ],
+  "cv_fit_count": 12,
+  "final_fit_count": 1,
+  "class_weights": {
+    "0": 0.5676729986431479,
+    "1": 4.194235588972431
+  },
+  "calibration": {
+    "slope": 1.1623123064162393,
+    "intercept": -1.5390900079071892,
+    "center": -0.6480165030863209,
+    "scale": 1.6592780660282644,
+    "calibration_n": 1116,
+    "calibration_positive": 251,
+    "constant_mapping": false,
+    "objective": 0.4395198882711156
+  },
+  "calibration_id_hash": "bbc5a568e259ed8cd7008c6af41b3ebd6cfb347effff2100b3d16171dcef9f1b",
+  "training_id_hash": "c064ef3edbcc6f1769979b7ffc972c15a3371c96a11b4ca4629f56fb70201aa3",
+  "test_id_hash": "7a74d4946f3bffaaffa3202b97379fd6536b54a6be23a86d208b38ca341cad3c",
+  "rank_order_identical": true
+}

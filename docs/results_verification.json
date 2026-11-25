@@ -1,0 +1,340 @@
+{
+  "review": "Independent adversarial recomputation of the modeling and evaluation stage: all 144 stored models re-scored against scikit-learn from their own predictions.csv, the top-10% rule reimplemented from the written specification, partition leakage invariants re-derived from the 18 manifests, namespaces recomputed from config/versions/code/manifest/fingerprint bytes, calibration parameters and sigmoid columns reconstructed from the calibration partition, hyperparameter selection re-argmaxed from the stored CV trials with sampler inputs rebound by content hash, every stored model reloaded and its predictions regenerated, and bootstrap accounting rejoined to metrics.csv with two groups' confidence intervals regenerated from scratch",
+  "scope": "partition manifests forward through training, calibration, held-out metrics and bootstrap; data preparation and fingerprinting were audited separately in docs/data_verification.json and were not re-audited",
+  "independence": "no project code was imported for any metric computation; average_precision_score, roc_auc_score, brier_score_loss and log_loss come from scikit-learn 1.9.1, and the weighted bootstrap metrics were recomputed through sklearn sample_weight. toxbench.modeling was imported only to unpickle stored model objects. Neither `runner run` nor `runner evaluate` nor `runner summarize` was executed.",
+  "models_checked": 144,
+  "partitions_checked": 18,
+  "models_per_partition": 8,
+  "distinct_namespaces": 18,
+  "metric_rows_checked": 432,
+  "metric_value_comparisons": 2592,
+  "bootstrap_rows_checked": 1296,
+  "evaluation_groups_checked": 36,
+  "cv_trials_checked": 576,
+  "cv_fold_scores_checked": 1728,
+  "sampler_logs_checked": 576,
+  "test_predictions_compared": 180600,
+  "stored_models_reloaded_and_rescored": 144,
+  "bootstrap_groups_fully_regenerated": 2,
+  "max_abs_deviation_vs_sklearn": 3.3306690738754696e-16,
+  "max_abs_deviation_bootstrap_difference": 0.0,
+  "max_abs_deviation_regenerated_bootstrap_ci": 3.3306690738754696e-16,
+  "max_abs_deviation_model_to_stored_prediction": 0.0,
+  "checks": {
+    "metrics_recomputed_average_precision_raw_and_sigmoid": true,
+    "metrics_recomputed_roc_auc_raw_and_sigmoid": true,
+    "metrics_recomputed_brier_raw_and_sigmoid": true,
+    "metrics_recomputed_log_loss_raw_and_sigmoid": true,
+    "metrics_recomputed_constant_state": true,
+    "no_metric_row_exceeds_1e-9": true,
+    "no_systematic_offset_between_project_and_sklearn_metrics": true,
+    "top10_precision_recall_reimplemented_match": true,
+    "top10_selection_count_equals_ceil_10pct": true,
+    "manifest_train_calibration_test_ids_pairwise_disjoint": true,
+    "manifest_scaffold_sets_pairwise_disjoint": true,
+    "manifest_rows_unique_and_fully_accounted": true,
+    "cv_fold_labels_confined_to_train_rows": true,
+    "predictions_structure_ids_equal_partition_test_set_exactly": true,
+    "calibration_predictions_ids_equal_partition_calibration_set_exactly": true,
+    "prediction_files_preserve_manifest_row_order": true,
+    "prediction_labels_and_scaffolds_match_manifest": true,
+    "no_train_rows_appear_in_test_or_calibration_predictions": true,
+    "namespace_shared_by_all_8_models_within_each_partition": true,
+    "namespace_distinct_across_all_18_partitions": true,
+    "namespace_recomputes_from_config_versions_code_manifest_fingerprints": true,
+    "all_fitted_sigmoid_slopes_nonnegative": true,
+    "no_constant_mapping_or_zero_slope_cases": true,
+    "constant_mapping_flag_consistent_with_slope": true,
+    "calibration_center_scale_n_positives_reproduce_from_calibration_rows": true,
+    "calibration_sigmoid_column_reproduces_bitwise_from_stored_parameters": true,
+    "calibration_objective_is_a_stationary_point_kkt": true,
+    "calibration_partition_has_both_classes": true,
+    "calibration_fit_bound_to_calibration_partition_only": true,
+    "rank_order_identical_false_cases_fully_accounted": true,
+    "stored_raw_and_sigmoid_ap_auc_bit_identical_in_metrics_csv": true,
+    "raw_and_sigmoid_ap_auc_agree_within_1e-12": true,
+    "no_strict_rank_reversal_between_raw_and_sigmoid": true,
+    "every_sigmoid_tie_collapse_is_single_class_so_ap_auc_unchanged": true,
+    "sklearn_recomputed_raw_and_sigmoid_ap_auc_bit_identical": false,
+    "training_calibration_test_id_hashes_bind_manifest_rows": true,
+    "sampler_inputs_bind_training_rows_only_by_content_hash": true,
+    "resampling_fitted_inside_each_cv_fold": true,
+    "trial_grid_order_matches_deterministic_config_grid": true,
+    "trial_mean_ap_equals_mean_of_three_fold_scores": true,
+    "selected_config_is_first_grid_argmax_of_cv_mean_ap": true,
+    "cv_fit_count_equals_three_times_grid_size": true,
+    "final_model_hyperparameters_equal_selected_config": true,
+    "stored_predictions_reproduce_bitwise_from_stored_model": true,
+    "estimator_settings_match_preregistered_decisions": true,
+    "bootstrap_valid_plus_invalid_equals_n_bootstrap": true,
+    "bootstrap_difference_equals_metrics_point_difference": true,
+    "bootstrap_rows_join_cleanly_with_metrics": true,
+    "bootstrap_unit_and_counts_match_partition": true,
+    "bootstrap_ci_bounds_ordered": true,
+    "bootstrap_cis_reproduce_independently_spot_check": true,
+    "bootstrap_cache_keys_fresh_not_stale": true,
+    "bootstrap_differences_csv_equals_per_group_files": true,
+    "constant_column_equals_training_prevalence": true,
+    "stored_train_prevalence_equals_manifest_training_prevalence": true,
+    "constant_baseline_roc_auc_is_exactly_0.5": true,
+    "evaluation_wide_predictions_match_run_predictions": true,
+    "per_run_metrics_csv_matches_aggregate_metrics_csv": true,
+    "summary_csv_aggregates_match_metrics_csv": true,
+    "config_on_disk_equals_config_recorded_with_outputs": true,
+    "recorded_package_versions_match_current_environment": true,
+    "run_enumeration_matches_completed_artifacts": true,
+    "no_csv_parsing_hazard_in_structure_ids_or_scaffolds": true
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "informational",
+      "title": "rank_order_identical is false for 2 of 144 models; the cause is a 1-2 ULP float64 tie-collapse among same-label negatives, not a calibration rank reversal",
+      "affected_models": [
+        "NR-AhR/scaffold/42/forest/none",
+        "SR-MMP/scaffold/17/forest/none"
+      ],
+      "evidence": {
+        "strict_rank_reversals_over_all_test_pairs_in_all_144_models": 0,
+        "models_where_sigmoid_ties_values_that_raw_separates": [
+          "NR-AhR/scaffold/17/forest/undersample",
+          "NR-AhR/scaffold/42/forest/none",
+          "SR-MMP/scaffold/17/forest/none",
+          "SR-MMP/random/2026/forest/undersample"
+        ],
+        "collapsed_group_composition": {
+          "NR-AhR/scaffold/17/forest/undersample": [
+            {
+              "size": 2,
+              "n_pos": 0,
+              "n_neg": 2,
+              "raw_values": [
+                0.20833333333333331,
+                0.20833333333333337
+              ],
+              "separation_ulps": 2.0
+            }
+          ],
+          "NR-AhR/scaffold/42/forest/none": [
+            {
+              "size": 2,
+              "n_pos": 0,
+              "n_neg": 2,
+              "raw_values": [
+                0.09333333333333332,
+                0.09333333333333334
+              ],
+              "separation_ulps": 1.0
+            }
+          ],
+          "SR-MMP/scaffold/17/forest/none": [
+            {
+              "size": 2,
+              "n_pos": 0,
+              "n_neg": 2,
+              "raw_values": [
+                0.03166666666666666,
+                0.03166666666666667
+              ],
+              "separation_ulps": 1.0
+            },
+            {
+              "size": 3,
+              "n_pos": 0,
+              "n_neg": 3,
+              "raw_values": [
+                0.05833333333333333,
+                0.05833333333333334
+              ],
+              "separation_ulps": 2.0
+            }
+          ],
+          "SR-MMP/random/2026/forest/undersample": [
+            {
+              "size": 9,
+              "n_pos": 0,
+              "n_neg": 9,
+              "raw_values": [
+                0.15999999999999998,
+                0.16
+              ],
+              "separation_ulps": 1.0
+            }
+          ]
+        },
+        "every_collapsed_group_is_single_class_all_negatives": true,
+        "mechanism": "RandomForestClassifier.predict_proba averages 200 per-tree class fractions; two test compounds whose per-tree addends sum to the same value in exact arithmetic can land 1-2 ULP apart in float64. The affine-plus-expit calibration map then rounds them onto one float64 value. Because each collapsed group is entirely negative, neither average_precision nor roc_auc changes mathematically.",
+        "worked_example_NR-AhR/scaffold/42/forest/none": {
+          "raw_values": [
+            0.09333333333333332,
+            0.09333333333333334
+          ],
+          "raw_values_hex": [
+            "0x1.7e4b17e4b17e4p-4",
+            "0x1.7e4b17e4b17e5p-4"
+          ],
+          "separation_in_ulps": 1.0,
+          "shared_sigmoid_value": 0.10903073226591249,
+          "both_labels": 0
+        },
+        "why_only_2_of_4_models_flag_false": "runner.py:86 compares np.lexsort((structure_id, -score)) orders. In the other two models the structure_id tie-break happens to restore the same permutation, so the flag stays true even though the tie structure differs."
+      },
+      "assessment": "Not a defect. The preregistered nonnegative-slope guarantee holds exactly: across all 144 models and every test pair, zero strictly-ordered raw pairs are reversed by the sigmoid. The flag is a strict permutation-equality test, so it is sensitive to float64 tie structure that carries no ranking information.",
+      "action": "If the report quotes rank_order_identical, state that false means a float64 tie-collapse among equal-label negatives, not a rank reversal."
+    },
+    {
+      "id": "F2",
+      "severity": "informational",
+      "title": "Ranking invariance holds exactly in the stored results; a 1-ULP artifact appears only in an independent sklearn recomputation",
+      "evidence": {
+        "stored_metrics_csv_max_abs_raw_minus_sigmoid": {
+          "average_precision": 0.0,
+          "roc_auc": 0.0
+        },
+        "stored_models_with_any_difference": 0,
+        "sklearn_recomputation_models_with_ap_difference": [
+          {
+            "run": "SR-MMP/scaffold/17/forest/none",
+            "abs_diff": 1.1102230246251565e-16
+          }
+        ],
+        "sklearn_recomputation_models_with_auc_difference": [
+          {
+            "run": "NR-AhR/scaffold/42/forest/none",
+            "abs_diff": 1.1102230246251565e-16
+          }
+        ],
+        "max_abs_difference_in_recomputation": 1.1102230246251565e-16
+      },
+      "assessment": "Check 6 passes on the project's own stored values: average_precision and roc_auc are bit-identical between raw and sigmoid for all 144 models in metrics.csv. The 1.11e-16 discrepancy appears only when the two columns are rescored through scikit-learn, whose internal summation order differs once the sigmoid column has one fewer distinct value (F1). Since every collapsed group is single-class, the metrics are mathematically identical and the residual is float64 summation order.",
+      "action": "None. The ranking-invariance claim is sound as stated."
+    },
+    {
+      "id": "F3",
+      "severity": "informational",
+      "title": "The bootstrap RNG seed is derived from the partition key only, so the two classifiers in a partition share identical resample draws",
+      "location": "toxbench/postprocess.py:32",
+      "evidence": {
+        "seed_expression": "int(sha256(f'{assay}/{kind}/{seed}').hexdigest()[:8], 16)",
+        "classifier_absent_from_seed_key": true,
+        "consequence": "for a given assay/split/seed the logistic group and the forest group draw the same 1000 bootstrap index vectors",
+        "verified_derived_seeds": {
+          "NR-AR/random/42/logistic": 57272940,
+          "SR-MMP/scaffold/17/forest": 541631709
+        }
+      },
+      "assessment": "Consistent with the preregistered rule 'random seed derived from partition key' and with 'bootstrap all methods on identical samples'. Within a classifier the pairing is correct and the intervals are valid. It does mean logistic and forest intervals inside one partition are not independently resampled.",
+      "action": "No code change. The report should not treat logistic and forest intervals within one partition as independent evidence."
+    },
+    {
+      "id": "F4",
+      "severity": "informational",
+      "title": "First-grid-entry tie-breaking was never exercised, so that clause rests on code reading alone",
+      "evidence": {
+        "models_with_more_than_one_trial_at_the_max_cv_mean_ap": 0,
+        "n_tied_at_max_distribution": {
+          "1": 144
+        },
+        "selected_grid_index_distribution": {
+          "0": 40,
+          "2": 45,
+          "3": 18,
+          "1": 41
+        },
+        "code_reference": "modeling.py:126 `best = max(valid, key=lambda v: v['mean_ap'])`, which returns the first maximal element"
+      },
+      "assessment": "The argmax claim is verified numerically for all 144 models, but because no two grid entries ever tied on mean_ap to float64 equality, the tie-breaking rule itself has no empirical support here. Python's max returning the first maximum is the only basis.",
+      "action": "If the report states that ties go to the first grid entry, note it is a property of the code, not an observed event."
+    }
+  ],
+  "observations": [
+    {
+      "id": "O1",
+      "title": "The project metric implementation is algebraically equivalent to scikit-learn, with no systematic offset",
+      "evidence": {
+        "max_abs_deviation_per_metric_and_state": {
+          "average_precision_raw": 3.3306690738754696e-16,
+          "average_precision_sigmoid": 3.3306690738754696e-16,
+          "average_precision_constant": 2.7755575615628914e-17,
+          "roc_auc_raw": 2.220446049250313e-16,
+          "roc_auc_sigmoid": 2.220446049250313e-16,
+          "roc_auc_constant": 0.0,
+          "brier_raw": 5.551115123125783e-17,
+          "brier_sigmoid": 2.7755575615628914e-17,
+          "brier_constant": 4.163336342344337e-17,
+          "log_loss_raw": 2.220446049250313e-16,
+          "log_loss_sigmoid": 1.1102230246251565e-16,
+          "log_loss_constant": 1.1102230246251565e-16,
+          "precision_top10_raw": 0.0,
+          "precision_top10_sigmoid": 0.0,
+          "precision_top10_constant": 0.0,
+          "recall_top10_raw": 0.0,
+          "recall_top10_sigmoid": 0.0,
+          "recall_top10_constant": 0.0
+        },
+        "largest_single_deviation_over_2592_comparisons": 3.3306690738754696e-16,
+        "rows_exceeding_1e-9": 0,
+        "note": "the tie-grouped AP and AUC sums in evaluation.py:69-73 reduce exactly to sklearn's average_precision_score and roc_auc_score; the log-loss clip at np.finfo(float64).eps (evaluation.py:47-49) matches scikit-learn 1.9.1's own clipping"
+      }
+    },
+    {
+      "id": "O2",
+      "title": "Calibration slope distribution",
+      "evidence": {
+        "slope_min": 0.5101130717804009,
+        "slope_max": 1.8874500103557532,
+        "slopes_equal_to_zero": [],
+        "constant_mapping_true_cases": [],
+        "rank_order_identical_distribution": {
+          "true": 142,
+          "false": 2
+        },
+        "calibration_set_score_auc_min": 0.5984871406959152,
+        "note": "no model's unconstrained Platt fit wanted a negative slope: the minimum calibration-partition AUC of the raw score is well above 0.5, so the nonnegativity bound at modeling.py:155 was never active"
+      }
+    },
+    {
+      "id": "O4",
+      "title": "CSV round-trip is free of parsing hazards",
+      "evidence": {
+        "na_colliding_scaffolds": 0,
+        "na_colliding_ids": 0,
+        "numeric_looking_ids": 0,
+        "default_vs_explicit_parse_mismatches": 0,
+        "note": "collect() in runner.py:105 reads predictions.csv with pandas default NA handling while postprocess.py:17 uses keep_default_na=False; no structure_id or scaffold value collides with pandas' default NA set, so the two parsings agree exactly across all 144 prediction files"
+      }
+    },
+    {
+      "id": "O3",
+      "title": "Code path read for check 7, bound to the runs by namespace recomputation",
+      "evidence": {
+        "lines_read": [
+          "runner.py:45 (frame split into train/calibration/test)",
+          "runner.py:70 (tune_fit receives `tr` only)",
+          "modeling.py:104-111 (folds built from `frame`, resample called on tr rows of each fold)",
+          "modeling.py:118 (validation scored on unresampled X[va.fp_index])",
+          "modeling.py:126 (argmax over CV mean_ap)",
+          "modeling.py:128-131 (refit resample on full training frame, model built with best params)"
+        ],
+        "binding": "the namespace stored in all 144 complete.json files recomputes exactly from sha256(modeling.py) and sha256(runner.py) plus config, package versions, manifest bytes and fingerprint bytes, so the source read above is the source that produced every run",
+        "modeling_py_sha256": "70bd35586c6a19097f5286986a8790c5739b27930ca002cd6917ddf720f7300f",
+        "runner_py_sha256": "1a0b3eb43eae71530a985354ce54b7946197309709e5346259f2f1ba305d5ed5"
+      }
+    }
+  ],
+  "excluded_by_brief_as_already_explained": [
+    "32 NaN average_precision/roc_auc in similarity_metrics.csv (single-class similarity bins)",
+    "identical_prediction_order hard-coded True at postprocess.py:43",
+    "seed column in bootstrap_differences.csv holding the partition seed (postprocess.py:33)"
+  ],
+  "checks_passed": 62,
+  "checks_failed": 1,
+  "expected_false_checks": [
+    "sklearn_recomputed_raw_and_sigmoid_ap_auc_bit_identical"
+  ],
+  "failed_check_names": [
+    "sklearn_recomputed_raw_and_sigmoid_ap_auc_bit_identical"
+  ],
+  "overall": "PASS",
+  "overall_note": "No correctness or integrity defect was found in the modeling or evaluation stage. All nine assigned checks pass against the project's stored results. One boolean is recorded false, 'sklearn_recomputed_raw_and_sigmoid_ap_auc_bit_identical', and is kept false rather than reworded: it is a stricter-than-asked variant that rescores both calibration states through scikit-learn. The brief's own check 6 ('raw and sigmoid give identical average_precision and roc_auc per model') passes exactly, with max |raw - sigmoid| = 0.0 in metrics.csv. Finding F2 explains the 1.11e-16 recomputation residual."
+}

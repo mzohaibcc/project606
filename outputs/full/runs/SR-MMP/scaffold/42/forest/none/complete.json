@@ -1,0 +1,16 @@
+{
+  "assay": "SR-MMP",
+  "split_kind": "scaffold",
+  "seed": 42,
+  "namespace": "41d4d17f3880f08e289b7bfa1f1bb8b7151609a0defbbdc5faee5b3d008014ea",
+  "train_n": 3347,
+  "calibration_n": 1116,
+  "test_n": 1115,
+  "train_prevalence": 0.12578428443382134,
+  "classifier": "forest",
+  "method": "none",
+  "seconds": 20.773963250000634,
+  "cv_fits": 12,
+  "final_fits": 1,
+  "completed_utc": "2026-11-25T20:02:41.173708+00:00"
+}

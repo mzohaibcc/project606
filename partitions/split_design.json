@@ -1,0 +1,27 @@
+{
+  "code_sha256": "ac9ac3c4ae73efe9554b6443c8bb7bcac73ad70a51ec74459a633fdb63fd9b25",
+  "numpy_version": "2.5.5",
+  "seeds": [
+    17,
+    42,
+    2026
+  ],
+  "settings": {
+    "cv": "three folds, stratified shuffled for random; same label-independent group allocator with equal thirds for scaffold",
+    "cv_seed_offset": 1009,
+    "fractions": [
+      0.6,
+      0.2,
+      0.2
+    ],
+    "infeasible": "raise if any partition or any CV training/validation fold lacks a class; never retry seeds or move groups based on labels",
+    "scaffold_assignment": "sort groups by decreasing size times seeded uniform[0.5,1.5] priority; assign each to largest remaining absolute target capacity; ties partition order",
+    "version": 1
+  },
+  "sklearn_version": "1.9.1",
+  "tasks": {
+    "NR-AR": "03cb5882cc20c7a1eee8f295946410d45a750b594e70cccbb005ad545c7dfdcd",
+    "NR-AhR": "33edfacff2286fa37e65e4a569f3e0dd2b6f8b1d2c0c20c2111cc4646f31caab",
+    "SR-MMP": "024f91da3f915eb43fa87907e1f289854b5ae3b549201be80c7bfad1af318327"
+  }
+}

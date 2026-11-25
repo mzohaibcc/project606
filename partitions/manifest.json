@@ -1,0 +1,53 @@
+{
+  "cache_key": "f834e1529d6412f93c9f966828fdc43eda732615d53907d0f814a2b28a202ebe",
+  "inputs": {
+    "code_sha256": "ac9ac3c4ae73efe9554b6443c8bb7bcac73ad70a51ec74459a633fdb63fd9b25",
+    "numpy_version": "2.5.5",
+    "seeds": [
+      17,
+      42,
+      2026
+    ],
+    "settings": {
+      "cv": "three folds, stratified shuffled for random; same label-independent group allocator with equal thirds for scaffold",
+      "cv_seed_offset": 1009,
+      "fractions": [
+        0.6,
+        0.2,
+        0.2
+      ],
+      "infeasible": "raise if any partition or any CV training/validation fold lacks a class; never retry seeds or move groups based on labels",
+      "scaffold_assignment": "sort groups by decreasing size times seeded uniform[0.5,1.5] priority; assign each to largest remaining absolute target capacity; ties partition order",
+      "version": 1
+    },
+    "sklearn_version": "1.9.1",
+    "tasks": {
+      "NR-AR": "03cb5882cc20c7a1eee8f295946410d45a750b594e70cccbb005ad545c7dfdcd",
+      "NR-AhR": "33edfacff2286fa37e65e4a569f3e0dd2b6f8b1d2c0c20c2111cc4646f31caab",
+      "SR-MMP": "024f91da3f915eb43fa87907e1f289854b5ae3b549201be80c7bfad1af318327"
+    }
+  },
+  "outputs": {
+    "partitions/NR-AR/random/17.csv": "77d67c4389b599627fd9d81ff48411cc3525d9cb9562da421e469cb81cda8800",
+    "partitions/NR-AR/random/2026.csv": "d7b055b245ada321effd6b7eca151d7f15981c6acf9690c10af6cef5c33890ab",
+    "partitions/NR-AR/random/42.csv": "557457a60bbbe47cb5a143baa57f70de366c0066728d9a3c8683cd1a93c7e562",
+    "partitions/NR-AR/scaffold/17.csv": "a6a07a9ffb07c471d826ed8ebadb8af4630f56541a9f539a506fe415fc6b3f67",
+    "partitions/NR-AR/scaffold/2026.csv": "5f61cd962f077cae882988a92f3fdef43ae801bd94de9ead07734445b7c85b46",
+    "partitions/NR-AR/scaffold/42.csv": "9d50c7b724931aa04497d81eef52ced6ef12533f7eaa2484845a1cb4266dbab9",
+    "partitions/NR-AhR/random/17.csv": "fdd6d34e207ddeb358011cc4b0d18b7abea93fe581736295abaf036d10add8c1",
+    "partitions/NR-AhR/random/2026.csv": "696d07b271839874fc2237c06152ba52d9ffdb32459e731e9bf7867f2b7db93d",
+    "partitions/NR-AhR/random/42.csv": "1d109a47c9f9da1bfa764239919676ed1118f2477b7c48a71c6d68ecd08f9723",
+    "partitions/NR-AhR/scaffold/17.csv": "0717bd01afe82e45a79143ad10a6b8002a3c102b5a2b35dd5e64309021c0e0ab",
+    "partitions/NR-AhR/scaffold/2026.csv": "40ea4dacfa5a3f8e984e1f88a28f4902c7547e218119cc2eb2acd0710100c015",
+    "partitions/NR-AhR/scaffold/42.csv": "86601ad5013fdf6722047051d713973b0547f2954d1b1f48e5d7e5f88ff2f630",
+    "partitions/SR-MMP/random/17.csv": "52281ad8f38f0d9af2f46dc18dc57b173c41841cf316256c0cb5e425ef78da68",
+    "partitions/SR-MMP/random/2026.csv": "828785d56423a37177a70e59ce3498b30cf1ccf84957cac02f315ee4f9f721ab",
+    "partitions/SR-MMP/random/42.csv": "0f5fb9536394e6900c37071e0e8b91b352f1f9ec8b9f973ff99a6bd45adcb0fb",
+    "partitions/SR-MMP/scaffold/17.csv": "938ff416e71c586e83679541a8a913c4c616839ea20473692e0d537f0bd4f5e2",
+    "partitions/SR-MMP/scaffold/2026.csv": "0445f9e09f30bad17200889f5d83083ef4a2e44a58c24088873e5a01115ddf12",
+    "partitions/SR-MMP/scaffold/42.csv": "8dbb46384cc93b9ac4ee748af359ef2f8d2398efa2214265723f37f4779f30ac",
+    "partitions/partition_summary.csv": "66f39f842b9936e467832267a2f3101951c7c3f388b59c1fa10f23bb2f02eca1",
+    "partitions/split_design.json": "8d2bbafcc0ba0cfa9bb119936a48fcc0f38bbcbc844eec6a6d65171997020bad",
+    "partitions/verification.json": "98cb55944c14e2b38101155131a1f51a36f7eeb78648a585fa6c6d612e53f9e0"
+  }
+}

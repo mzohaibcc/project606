@@ -1,0 +1,162 @@
+{
+  "selected": {
+    "params": {
+      "C": 0.01
+    },
+    "scores": [
+      0.27966907763695337,
+      0.14671077392090656,
+      0.43841479552786694
+    ],
+    "status": "complete",
+    "mean_ap": 0.28826488236190895
+  },
+  "trials": [
+    {
+      "params": {
+        "C": 0.01
+      },
+      "scores": [
+        0.27966907763695337,
+        0.14671077392090656,
+        0.43841479552786694
+      ],
+      "status": "complete",
+      "mean_ap": 0.28826488236190895
+    },
+    {
+      "params": {
+        "C": 0.1
+      },
+      "scores": [
+        0.3233214723330907,
+        0.12171546313894581,
+        0.4148604976156439
+      ],
+      "status": "complete",
+      "mean_ap": 0.2866324776958935
+    },
+    {
+      "params": {
+        "C": 1.0
+      },
+      "scores": [
+        0.31115128917131746,
+        0.1011271058432056,
+        0.34026928991946853
+      ],
+      "status": "complete",
+      "mean_ap": 0.25084922831133055
+    },
+    {
+      "params": {
+        "C": 10.0
+      },
+      "scores": [
+        0.3131112076268058,
+        0.09214499174834795,
+        0.2892510453165175
+      ],
+      "status": "complete",
+      "mean_ap": 0.23150241489722376
+    }
+  ],
+  "sampler_logs": [
+    {
+      "cache_key": "91ea9feac85f1214b675665ace934c167346a9e5ed2927a85fa8157312b29e47",
+      "input_id_hash": "1f0b604c786b4f769f1b8f45d3cbc001171ce4d1ad6f436a8306b99e30cb7418",
+      "before": {
+        "0": 2325,
+        "1": 212
+      },
+      "method": "weights",
+      "seed": 17,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2325,
+        "1": 212
+      },
+      "seconds": 2.166699960071128e-05,
+      "cache_hit": false,
+      "stage": "cv_0"
+    },
+    {
+      "cache_key": "0265824afcb4740a7f124dac91ac17362be741a65dc9c0ebcc00f5136321859b",
+      "input_id_hash": "76a5d99ecc5733424ff03fe2f148d819dea91c58806ad1066ffc18304953ead3",
+      "before": {
+        "0": 1921,
+        "1": 350
+      },
+      "method": "weights",
+      "seed": 18,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 1921,
+        "1": 350
+      },
+      "seconds": 1.6666999727021903e-05,
+      "cache_hit": false,
+      "stage": "cv_1"
+    },
+    {
+      "cache_key": "2b9e8a266d811522b42d5129b81039b60f32e539b9592649622418c82885833e",
+      "input_id_hash": "b0c0c80751b5c088c06e308e259ed3c22995eed81a6b6b3333732837fa419e2e",
+      "before": {
+        "0": 2552,
+        "1": 174
+      },
+      "method": "weights",
+      "seed": 19,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2552,
+        "1": 174
+      },
+      "seconds": 1.8124999769497663e-05,
+      "cache_hit": false,
+      "stage": "cv_2"
+    },
+    {
+      "cache_key": "0c70b11eec44d310cdadae7f7c4b4566bc2cf761b2460f1be96b626332a78625",
+      "input_id_hash": "41e0c0ebcfc0b221deedeb35c431895766bf36708934a03523454ab4bf0257b2",
+      "before": {
+        "0": 3399,
+        "1": 368
+      },
+      "method": "weights",
+      "seed": 117,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 3399,
+        "1": 368
+      },
+      "seconds": 2.0374999621708412e-05,
+      "cache_hit": false,
+      "stage": "refit"
+    }
+  ],
+  "cv_fit_count": 12,
+  "final_fit_count": 1,
+  "class_weights": {
+    "0": 0.5541335686966755,
+    "1": 5.118206521739131
+  },
+  "calibration": {
+    "slope": 1.442906430570918,
+    "intercept": -2.4879021484333954,
+    "center": -0.3265049038016086,
+    "scale": 1.0410292658166898,
+    "calibration_n": 1256,
+    "calibration_positive": 172,
+    "constant_mapping": false,
+    "objective": 0.307590889747913
+  },
+  "calibration_id_hash": "6af8601b9811172ec6e4a9e331787643b57f5d7a7ab89d404c550c1d10415f23",
+  "training_id_hash": "41e0c0ebcfc0b221deedeb35c431895766bf36708934a03523454ab4bf0257b2",
+  "test_id_hash": "e110c586fe9e7277b076c0d6a25e2ee89e8a0a7dd98579f626b9419d352bfc6b",
+  "rank_order_identical": true
+}

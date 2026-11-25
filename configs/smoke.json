@@ -1,0 +1,41 @@
+{
+  "assays": [
+    "NR-AR"
+  ],
+  "split_kinds": [
+    "scaffold"
+  ],
+  "seeds": [
+    17
+  ],
+  "classifiers": [
+    "logistic",
+    "forest"
+  ],
+  "balancing": [
+    "none",
+    "weights",
+    "undersample",
+    "smoteenn"
+  ],
+  "logistic_C": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "forest_depth": [
+    10,
+    null
+  ],
+  "forest_min_leaf": [
+    1,
+    5
+  ],
+  "forest_trees": 200,
+  "cv_folds": 3,
+  "bootstrap_replicates": 200,
+  "workers": 1,
+  "estimator_threads": 1,
+  "protocol_version": "1.0"
+}

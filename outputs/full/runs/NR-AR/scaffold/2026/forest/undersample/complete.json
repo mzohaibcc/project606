@@ -1,0 +1,16 @@
+{
+  "assay": "NR-AR",
+  "split_kind": "scaffold",
+  "seed": 2026,
+  "namespace": "1fef7b6c33bcadcde0a6006ef2a58c438904f40580a2b473b52d6d6023ee6228",
+  "train_n": 4174,
+  "calibration_n": 1392,
+  "test_n": 1391,
+  "train_prevalence": 0.03162434115955918,
+  "classifier": "forest",
+  "method": "undersample",
+  "seconds": 2.4711494590001166,
+  "cv_fits": 12,
+  "final_fits": 1,
+  "completed_utc": "2026-11-25T19:56:51.034913+00:00"
+}

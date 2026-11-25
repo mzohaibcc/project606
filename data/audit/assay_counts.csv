@@ -1,0 +1,4 @@
+assay,raw_records,raw_observed,raw_positives,raw_negatives,raw_missing,invalid_structure_observed_rows,valid_structure_observed_rows,conflicting_structures,conflicting_rows,consistent_duplicate_rows_merged,clean_structures,clean_positives,clean_negatives,clean_prevalence
+NR-AR,7831,7265,309,6956,566,87,7178,8,17,204,6957,298,6659,0.042834555124335205
+NR-AhR,7831,6549,768,5781,1282,82,6467,10,21,168,6278,748,5530,0.11914622491239248
+SR-MMP,7831,5810,918,4892,2021,70,5740,7,17,145,5578,888,4690,0.15919684474722123

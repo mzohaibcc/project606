@@ -1,0 +1,335 @@
+{
+  "NR-AR/random/17": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_train_only": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 142,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 232,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 204,
+      "train_test_structures": 0
+    }
+  },
+  "NR-AR/random/2026": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_train_only": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 128,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 220,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 224,
+      "train_test_structures": 0
+    }
+  },
+  "NR-AR/random/42": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_train_only": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 130,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 222,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 212,
+      "train_test_structures": 0
+    }
+  },
+  "NR-AR/scaffold/17": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_scaffold_disjoint": true,
+      "cv_train_only": true,
+      "empty_scaffold_unsplit": true,
+      "scaffold_disjoint": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 0,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 0,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 0,
+      "train_test_structures": 0
+    }
+  },
+  "NR-AR/scaffold/2026": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_scaffold_disjoint": true,
+      "cv_train_only": true,
+      "empty_scaffold_unsplit": true,
+      "scaffold_disjoint": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 0,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 0,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 0,
+      "train_test_structures": 0
+    }
+  },
+  "NR-AR/scaffold/42": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_scaffold_disjoint": true,
+      "cv_train_only": true,
+      "empty_scaffold_unsplit": true,
+      "scaffold_disjoint": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 0,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 0,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 0,
+      "train_test_structures": 0
+    }
+  },
+  "NR-AhR/random/17": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_train_only": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 133,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 192,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 212,
+      "train_test_structures": 0
+    }
+  },
+  "NR-AhR/random/2026": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_train_only": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 128,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 194,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 203,
+      "train_test_structures": 0
+    }
+  },
+  "NR-AhR/random/42": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_train_only": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 114,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 200,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 191,
+      "train_test_structures": 0
+    }
+  },
+  "NR-AhR/scaffold/17": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_scaffold_disjoint": true,
+      "cv_train_only": true,
+      "empty_scaffold_unsplit": true,
+      "scaffold_disjoint": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 0,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 0,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 0,
+      "train_test_structures": 0
+    }
+  },
+  "NR-AhR/scaffold/2026": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_scaffold_disjoint": true,
+      "cv_train_only": true,
+      "empty_scaffold_unsplit": true,
+      "scaffold_disjoint": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 0,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 0,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 0,
+      "train_test_structures": 0
+    }
+  },
+  "NR-AhR/scaffold/42": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_scaffold_disjoint": true,
+      "cv_train_only": true,
+      "empty_scaffold_unsplit": true,
+      "scaffold_disjoint": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 0,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 0,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 0,
+      "train_test_structures": 0
+    }
+  },
+  "SR-MMP/random/17": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_train_only": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 88,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 150,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 175,
+      "train_test_structures": 0
+    }
+  },
+  "SR-MMP/random/2026": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_train_only": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 96,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 163,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 146,
+      "train_test_structures": 0
+    }
+  },
+  "SR-MMP/random/42": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_train_only": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 89,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 160,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 174,
+      "train_test_structures": 0
+    }
+  },
+  "SR-MMP/scaffold/17": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_scaffold_disjoint": true,
+      "cv_train_only": true,
+      "empty_scaffold_unsplit": true,
+      "scaffold_disjoint": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 0,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 0,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 0,
+      "train_test_structures": 0
+    }
+  },
+  "SR-MMP/scaffold/2026": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_scaffold_disjoint": true,
+      "cv_train_only": true,
+      "empty_scaffold_unsplit": true,
+      "scaffold_disjoint": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 0,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 0,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 0,
+      "train_test_structures": 0
+    }
+  },
+  "SR-MMP/scaffold/42": {
+    "checks": {
+      "all_rows_assigned": true,
+      "all_training_rows_in_cv": true,
+      "cv_scaffold_disjoint": true,
+      "cv_train_only": true,
+      "empty_scaffold_unsplit": true,
+      "scaffold_disjoint": true,
+      "structure_disjoint": true,
+      "unique_structures": true
+    },
+    "overlap_counts": {
+      "calibration_test_scaffolds": 0,
+      "calibration_test_structures": 0,
+      "train_calibration_scaffolds": 0,
+      "train_calibration_structures": 0,
+      "train_test_scaffolds": 0,
+      "train_test_structures": 0
+    }
+  }
+}

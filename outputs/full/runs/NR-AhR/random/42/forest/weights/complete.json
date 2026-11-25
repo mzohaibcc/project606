@@ -1,0 +1,16 @@
+{
+  "assay": "NR-AhR",
+  "split_kind": "random",
+  "seed": 42,
+  "namespace": "f00600a865e9deb1883cfddcbffc6e01a12221201917152407deaa9f5e725380",
+  "train_n": 3766,
+  "calibration_n": 1256,
+  "test_n": 1256,
+  "train_prevalence": 0.11922464152947425,
+  "classifier": "forest",
+  "method": "weights",
+  "seconds": 17.86708708399965,
+  "cv_fits": 12,
+  "final_fits": 1,
+  "completed_utc": "2026-11-25T20:01:33.877885+00:00"
+}

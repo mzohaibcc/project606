@@ -1,0 +1,162 @@
+{
+  "selected": {
+    "params": {
+      "C": 0.01
+    },
+    "scores": [
+      0.017404027389311218,
+      0.013215922742091588,
+      0.0624988619313654
+    ],
+    "status": "complete",
+    "mean_ap": 0.031039604020922734
+  },
+  "trials": [
+    {
+      "params": {
+        "C": 0.01
+      },
+      "scores": [
+        0.017404027389311218,
+        0.013215922742091588,
+        0.0624988619313654
+      ],
+      "status": "complete",
+      "mean_ap": 0.031039604020922734
+    },
+    {
+      "params": {
+        "C": 0.1
+      },
+      "scores": [
+        0.016655464667009907,
+        0.011996905793947816,
+        0.059842802498769054
+      ],
+      "status": "complete",
+      "mean_ap": 0.029498390986575595
+    },
+    {
+      "params": {
+        "C": 1.0
+      },
+      "scores": [
+        0.016249272401340047,
+        0.01083589834396495,
+        0.055679896495133975
+      ],
+      "status": "complete",
+      "mean_ap": 0.027588355746812992
+    },
+    {
+      "params": {
+        "C": 10.0
+      },
+      "scores": [
+        0.015853535072294755,
+        0.010990850807754794,
+        0.05465823014867685
+      ],
+      "status": "complete",
+      "mean_ap": 0.027167538676242133
+    }
+  ],
+  "sampler_logs": [
+    {
+      "cache_key": "56e41fe01626288955eade94cfa4876222d8ae8be0800d9e816ca63135dd2a0a",
+      "input_id_hash": "2058a03884aae4179d750675d2046e6749ff545b37c284023fba81b8302c8791",
+      "before": {
+        "0": 2707,
+        "1": 108
+      },
+      "method": "weights",
+      "seed": 2026,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2707,
+        "1": 108
+      },
+      "seconds": 1.237499964190647e-05,
+      "cache_hit": false,
+      "stage": "cv_0"
+    },
+    {
+      "cache_key": "e743569230d97b0041d8c27f5feb29855e13a0d87dc027b416bfd2ee4ed5a4b5",
+      "input_id_hash": "4cbb70b999f1331a99ba8b004d46aa1f7e596a0346d911d356eaf491ba2a5bb4",
+      "before": {
+        "0": 2497,
+        "1": 118
+      },
+      "method": "weights",
+      "seed": 2027,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2497,
+        "1": 118
+      },
+      "seconds": 1.4707999980601016e-05,
+      "cache_hit": false,
+      "stage": "cv_1"
+    },
+    {
+      "cache_key": "37a7163ee6f98955a28bd95cd9fda08f3807b88e05249cca09d778694c56e82e",
+      "input_id_hash": "9025108a9956ac20f55196bb4463dae23a68ba6c4183371c4e7d72baaa262a8f",
+      "before": {
+        "0": 2880,
+        "1": 38
+      },
+      "method": "weights",
+      "seed": 2028,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 2880,
+        "1": 38
+      },
+      "seconds": 1.4207999811333138e-05,
+      "cache_hit": false,
+      "stage": "cv_2"
+    },
+    {
+      "cache_key": "1ea8c49d3fed10c6f7053dc90f482a2b7e82add2cb9d0722d72a2fd2eb626948",
+      "input_id_hash": "4b12066c51d39689e426028ccc18c29896eecdb6789a7722da4d5d299ff90279",
+      "before": {
+        "0": 4042,
+        "1": 132
+      },
+      "method": "weights",
+      "seed": 2126,
+      "adjustment": null,
+      "dtype": "float32",
+      "after": {
+        "0": 4042,
+        "1": 132
+      },
+      "seconds": 1.704099940980086e-05,
+      "cache_hit": false,
+      "stage": "refit"
+    }
+  ],
+  "cv_fit_count": 12,
+  "final_fit_count": 1,
+  "class_weights": {
+    "0": 0.516328550222662,
+    "1": 15.81060606060606
+  },
+  "calibration": {
+    "slope": 0.8050871664251341,
+    "intercept": -3.27715257577638,
+    "center": -0.7630482059391255,
+    "scale": 0.7331458865055064,
+    "calibration_n": 1392,
+    "calibration_positive": 70,
+    "constant_mapping": false,
+    "objective": 0.1739371182180646
+  },
+  "calibration_id_hash": "7720288fca9eeb09cdc9bf052d09b4046fec3353f7f041a379fc84c93a59cfe6",
+  "training_id_hash": "4b12066c51d39689e426028ccc18c29896eecdb6789a7722da4d5d299ff90279",
+  "test_id_hash": "02c12793061a35184d1ae92c22e7da9d648911ab334aab41deb3680a9253bfed",
+  "rank_order_identical": true
+}

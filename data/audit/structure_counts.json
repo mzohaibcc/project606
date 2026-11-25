@@ -1,0 +1,9 @@
+{
+  "empty_scaffold_unique_structures": 1637,
+  "exclusion_log_note": "A row may have both a global structure exclusion and assay-specific missing-label entries; do not sum overlapping reasons.",
+  "global_duplicate_rows": 219,
+  "invalid_or_nonorganic_structure_rows": 88,
+  "raw_records": 7831,
+  "unique_standardized_structures": 7524,
+  "valid_structure_rows": 7743
+}
