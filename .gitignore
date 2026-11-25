@@ -11,3 +11,10 @@ outputs/**/model.joblib
 
 # Notebook demo scratch: recreated from scratch on every notebook run.
 outputs/notebook_demo/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
