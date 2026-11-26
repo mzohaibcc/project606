@@ -41,6 +41,13 @@ before continuing.
 
 ## 4. Run the whole notebook
 
+> **Leave `RUN_FULL_BENCHMARK = False`.** Section 5.1 defines this switch. At the default
+> it fits eight demonstration models in about a minute. Setting it to `True` reruns the
+> complete 144-model benchmark — 1,872 model fits, which took over nine minutes on a
+> 10-core machine and will take far longer on a 2-vCPU Colab runtime, very likely
+> outlasting the session. The switch exists so the full configuration is reproducible on
+> demand; it is not what you want for the submitted run.
+
 1. Choose **Runtime > Run all**.
 2. Colab will warn that the notebook was not authored by Google. Click **Run anyway**.
 3. **If a "RESTART SESSION" button or a restart prompt appears** after the dependency
@@ -71,8 +78,14 @@ Figures a display cell could not find: 0
 Also check, higher up:
 
 * **section 2.3** ends with `All 9 pinned runtime packages match, and nothing stale is loaded.`
-* **section 5.2** ends with `All 8 demonstration models completed with no failures.`
+* **section 5.2** prints the project's real training code — several screens of it, starting
+  with `def resample(` and including `def tune_fit(` and `class SigmoidCalibrator`. This is
+  the evidence for the "Model Implementation and Training" criterion, so make sure it is
+  visible and not collapsed before you save.
+* **section 5.3** ends with `All 8 demonstration models completed with no failures.`
 * **section 9.4** ends with `All committed figure files are present.`
+* Scroll through section 9.3 and confirm the figure panels actually **rendered as images**
+  rather than printing a file path.
 
 If any cell shows a red error box, read its message — the notebook is written to say what
 to do — fix it, and run again from **Runtime > Run all**. Do not share a notebook with a
